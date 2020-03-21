@@ -1,0 +1,11 @@
+boss/rattenmensch.png
+Rattenmensch
+193
+300
+60
+60
+8
+9
+Zweifachschlag
+50
+20

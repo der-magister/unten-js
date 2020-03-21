@@ -1,0 +1,11 @@
+Eisfisch.png
+Eisfisch
+200
+330
+38
+38
+9
+13
+keine
+28
+20

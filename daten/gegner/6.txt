@@ -1,0 +1,11 @@
+fisch.png
+Fisch
+200
+330
+12
+12
+7
+7
+keine
+6
+3

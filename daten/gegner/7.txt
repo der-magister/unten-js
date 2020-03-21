@@ -1,0 +1,11 @@
+krake.png
+Krake
+200
+330
+15
+15
+7
+7
+keine
+7
+4

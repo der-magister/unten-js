@@ -1,0 +1,14 @@
+Options
+Music
+Switch music on or off
+Soundeffects
+Switch soundeffects on or off
+Language
+Deutsch
+English
+Selection of the language
+Apply
+Apply and saves the options
+Back
+Back to the main menue
+

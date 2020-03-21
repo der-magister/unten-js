@@ -1,0 +1,12 @@
+1-4/fliegenschwarm.png
+Fliegenschwarm
+200
+330
+7
+7
+7
+6
+keine
+5
+3
+

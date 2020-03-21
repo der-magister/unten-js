@@ -1,0 +1,11 @@
+boss/Pilzmensch.png
+Pilzmensch
+193
+300
+100
+100
+10
+13
+Zweifachschlag
+90
+30

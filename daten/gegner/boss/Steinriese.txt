@@ -1,0 +1,11 @@
+boss/Steinriese.png
+Steinriese
+193
+300
+150
+150
+11
+15
+Dreifachschlag
+200
+70

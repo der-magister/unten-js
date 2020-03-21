@@ -1,0 +1,11 @@
+boss/Puppengeist.png
+Puppengeist
+193
+300
+125
+125
+10
+14
+Dreifachschlag
+120
+45

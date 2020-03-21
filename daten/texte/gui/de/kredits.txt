@@ -1,0 +1,14 @@
+Programmierung:
+Heiko Wolf
+Grafik:
+Julian H. Wolf, Heiko Wolf
+Musik und Soundeffekte:
+stammen aus dem Wesnoth-Projekt (https://wiki.wesnoth.org/Credits#Music)
+Konzept und restliches Design:
+Heiko Wolf
+Tester:
+Julian H. Wolf
+Kontakt:
+h.wolf@skywave-2000.de
+Das Spiel ist unter der GPL 2.0 lizenziert (siehe Datei gpl-2.0.txt).
+Zurück

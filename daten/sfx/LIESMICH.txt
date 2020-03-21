@@ -1,0 +1,7 @@
+Folgende Soundeffekte wurden dem Wesnoth Projekt entnommen:
+
+sword-1.ogg
+heal.wav
+miss-1.ogg
+
+Die Rechte liegen bei den entsprechenden Inhabern! https://wiki.wesnoth.org/Credits#Sound_Effects

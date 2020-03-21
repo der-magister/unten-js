@@ -1,0 +1,11 @@
+1-4/spinne.png
+Spinne
+200
+300
+6
+6
+5
+6
+keine
+2
+1

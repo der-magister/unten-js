@@ -1,0 +1,14 @@
+Charaktererstellung
+Vorname:
+Den Vornamen des Charakters in dieses Feld eingeben. Maximal 15 Buchstaben darf der Vorname lang sein.
+Name:
+Den Namen des Charakters in dieses Feld eingeben. Maximal 15 Buchstaben darf der Name lang sein.
+Weiter
+Speichert den erstellten Charakter und beginnt mit dem Spiel.
+Aussehen:
+Krieger
+Der Charakter sieht aus wie ein Krieger.
+Dieb
+Der Charakter sieht aus wie ein Dieb.
+Zauberer
+Der Charakter sieht aus wie ein Zauberer.

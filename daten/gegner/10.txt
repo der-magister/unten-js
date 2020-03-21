@@ -1,0 +1,11 @@
+Zombie.png
+Zombie
+200
+330
+22
+22
+9
+10
+keine
+15
+8

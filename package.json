@@ -1,0 +1,28 @@
+{
+  "name": "unten",
+  "main": "unten.html",
+  "description": "Ein RPG im Retrodesign",
+  "version": "005",
+
+  "single-instance": true,
+  "nodejs": false,
+
+  "window":
+  {
+    "width": 690,
+    "height": 565,
+    "resizable": false,
+    "fullscreen": false,
+    "min_width": 690,
+    "min_height": 565,
+    "max_width": 690,
+    "max_height": 565,
+    "icon": "daten/gfk/unten-icon.png",
+    "toolbar": false
+  },
+
+  "webkit": 
+  {
+    "plugin": false
+  }
+}

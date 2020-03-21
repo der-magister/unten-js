@@ -1,0 +1,20 @@
+N
+Bewegt den Cursor nach Norden
+S
+Bewegt den Cursor nach Süden
+W
+Bewegt den Cursor nach Westen
+O
+Bewegt den Cursor nach Osten
+Setz
+Setzt das Tile an der aktuellen Position
+Füllen
+Füllt die gesamte Karte mit dem aktuelle Tile
+Lösch
+Löscht die erstellte Karte
+Laden
+Lädt eine Karte
+Speichern
+Speichert die Karte ab
+Beenden
+Beendet den Editor

@@ -1,0 +1,412 @@
+/*  
+   Unten - ein Rollenspiel im Retrodesign
+
+   Copyright (C) 2017-2018 Heiko Wolf
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License As published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+   GNU General Public License For more details.
+
+   You should have received a copy of the GNU General Public License along
+   With this program; if not, write to the Free Software Foundation, Inc.,
+   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+   Kontakt: unten@skywave-2000.de 
+
+*/
+
+@charset "UTF-8";
+
+/*@font-face { font-family: "gamefont";
+             src: url ("daten/gfk/font/LinLibertine/LinLibertine_DRah.ttf") format ("truetype"); }*/
+
+/* Startbildschirm */
+body
+{
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #808080;
+}
+
+h1, #TextName, #klassenwahl, #ButtonNSpiel, #ButtonASpiel, #kredits
+{
+  transform: translate (-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#TextName, #klassenwahl, #ButtonNSpiel, #ButtonASpiel
+{
+  height: 36px;
+  font-size: 12px;
+  left: 50%;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+}
+
+h1
+{
+  position: absolute;
+  top: 1%;
+  text-decoration: underline;
+  font-size: 24px;
+  left: 50%;
+}
+
+#TextName { top: 12%; text-align: center; }
+
+#klassenwahl
+{
+  width: 20em;
+  height: 3em;
+  top: 20%;
+}
+
+#ButtonNSpiel { top: 28%; }
+#ButtonASpiel { top: 35%; }
+
+/*#ButtonOptionen
+{
+  position: absolute;
+  top : 32%;
+}*/
+
+#kredits
+{
+  top: 55%;
+  left: 52%;
+  font-size: 10px;
+}
+
+#changelog { font-size: 10px; visibility: hidden; }
+
+/* Canvas */
+#enginecanvas, #kampfhintergrundcanvas, #statuscanvas
+{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  visibility: hidden;
+}
+
+#hintergrundcanvas
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  visibility: hidden;
+  
+}
+
+#fenstercanvas
+{
+  position: absolute;
+  top: 270px;
+  left: 30px;
+  background:transparent;
+  visibility: hidden;
+}
+
+#ausgabecanvas
+{
+  position: absolute;
+  top: 0px;
+  left: 441px;
+  background: transparent;
+  visibility: hidden;
+}
+
+#ausgabe2canvas
+{
+  position: absolute;
+  top: 431px;
+  left: 38px;
+  background: transparent;
+  visibility: hidden;
+}
+
+#kampfmeldungscanvas
+{
+  position: absolute;
+  background: transparent;
+  visibility: hidden;
+}
+
+#ButtonN, #ButtonS, #ButtonW, #ButtonO, #ButtonI, #ButtonZaubern, #ButtonSpeichern, #ButtonVerlassen, #ButtonVollbild, #ButtonHeiltrank, #ButtonManatrank, #ButtonMedizintrank, #ButtonPortalrolle, #ButtonMusik, #ButtonSound
+{
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Steuerbuttons */
+#ButtonN  { top: 455px; left: 65px; }
+#ButtonS { top: 525px; left: 65px; }
+#ButtonW { top: 490px; left: 30px; }
+#ButtonO { top: 490px; left: 100px; }
+#ButtonI { top: 490px; left: 65px; }
+
+#Zauberliste
+{
+  position: absolute;
+  top: 495px;
+  left: 255px;
+  width: 120px;
+  height: 20px;
+  font-size: 10px;
+  visibility: hidden;
+  border-width: 1px;
+}
+
+#ButtonHeiltrank { top: 450px; left: 255px; }
+#ButtonManatrank { top: 450px; left: 298px; }
+#ButtonMedizintrank { top: 450px; left: 338px; }
+#ButtonPortalrolle { top: 450px; left: 380px; }
+
+#ButtonZaubern { top: 490px; left: 380px; }
+
+#ButtonMusik { top: 525px; left: 460px; }
+#ButtonSound { top: 525px; left: 500px; }
+#ButtonSpeichern { top: 525px; left: 590px; }
+#ButtonVollbild { top: 525px; left: 545px; }
+
+#ButtonVerlassen { top: 525px; left: 630px; }
+
+/* Händler */
+h3 
+{
+  position: absolute;
+  top: 1px;
+  left: 200px;
+  font-family: "LinLibertine";
+  font-size: 24px;
+  text-decoration: underline;
+  visibility: hidden;
+}
+
+#PreisHeiltrank
+{
+  position: absolute;
+  font-family: "LinLibertine";
+  font-size: 16px;
+  visibility: hidden;
+  top: 70px;
+  left: 110px;
+  width: 200px;
+  height: 20px;
+  border: 0;
+  background-color: #808080;
+}
+
+#PreisManatrank
+{
+  position: absolute;
+  font-family: "LinLibertine";
+  font-size: 16px;
+  visibility: hidden;
+  top: 105px;
+  left: 110px;
+  width: 200px;
+  height: 20px;
+  border: 0;
+  background-color: #808080;
+}
+
+#PreisPortalrolle
+{
+  position: absolute;
+  font-family: "LinLibertine";
+  font-size: 16px;
+  visibility: hidden;
+  top: 140px;
+  left: 110px;
+  width: 200px;
+  height: 20px;
+  border: 0;
+  background-color: #808080;
+}
+
+#PreisProviant
+{
+  position: absolute;
+  font-family: "LinLibertine";
+  font-size: 16px;
+  visibility: hidden;
+  top: 175px;
+  left: 110px;
+  width: 200px;
+  height: 20px;
+  border: 0;
+  background-color: #808080;
+}
+
+#KaufHeiltrank
+{
+  position: absolute;
+  top: 67px;
+  left: 350px;
+  width: 30px;
+  height: 20px;
+  font-family: "LinLibertine";
+  font-size: 12px;
+  visibility: hidden;
+  background-color: #808080;
+}
+
+#KaufManatrank
+{
+  position: absolute;
+  top: 102px;
+  left: 350px;
+  height: 20px;
+  width: 30px;
+  font-family: "LinLibertine";
+  font-size: 12px;
+  visibility: hidden;
+  background-color: #808080;
+}
+
+#KaufPortalrolle
+{
+  position: absolute;
+  top: 137px;
+  left: 350px;
+  width: 30px;
+  height: 20px;
+  font-family: "LinLibertine";
+  font-size: 12px;
+  visibility: hidden;
+  background-color: #808080;
+}
+
+#KaufProviant
+{
+  position: absolute;
+  top: 172px;
+  left: 350px;
+  width: 30px;
+  height: 20px;
+  font-family: "LinLibertine";
+  font-size: 12px;
+  visibility: hidden;
+  background-color: #808080;
+}
+
+#spielersprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 250px;
+  visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+#gegnersprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+#treffersprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+#misssprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+#blocksprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  visibility: hidden;
+  user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+#kritsprite
+{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  visibility: hidden;
+   user-select: none;
+  -moz-user-select: none;       
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+}
+
+/*#musik0
+{
+  visibility: hidden;
+  position: absolute;
+  top: 560px;
+  left: 75px;
+}*/
+
+#lade
+{
+  visibility: hidden;
+}

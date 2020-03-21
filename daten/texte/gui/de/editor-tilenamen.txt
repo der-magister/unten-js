@@ -1,0 +1,10 @@
+Löscher
+Schlachtfeld
+Boden
+Mauer
+Schild
+Tür
+Truhe
+Boden
+Leiter
+Nichtspielercharakter

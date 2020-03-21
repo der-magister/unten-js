@@ -1,0 +1,13 @@
+Neues Spiel starten
+Beginnt ein neues Spiel
+Gespeichertes Spiel fortsetzen
+Setzt einen gespeicherten Spielstand fort
+Beenden
+Beendet das Spiel
+Editor starten
+Startet den Editor
+Optionen
+Zeigt die Optionen an
+Mitwirkende
+Die Erschaffer dieses Spieles
+Version: Prototype 004

@@ -1,0 +1,1 @@
+Beendet das aktuelle Spiel und geht zum Startbildschirm zurück.

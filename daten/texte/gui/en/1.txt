@@ -1,0 +1,29 @@
+Name:
+Hit points:
+Mana Points:
+Experience:
+Level:
+Weapon:
+Armor:
+Shield:
+Gold coins:
+Healing Potions:
+Mana Potions:
+Keys:
+Portal roles:
+provisions:
+Battlegrounds:
+Quest:
+Level:
+Moving the player character to the north.
+Moving the player character to the west.
+Moving the player character to the east.
+Moving the player character to the south.
+Performs actions with the environment.
+Use a healing potion.
+Use a mana potion.
+Using a portal role.
+Saves the game. Existing game will be overwritten!
+Ends the current game and returns to the home screen.
+Spell selection
+Executes selected spell

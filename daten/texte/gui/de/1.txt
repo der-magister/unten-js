@@ -1,0 +1,29 @@
+Name:
+Lebenspunkte:
+Manapunkte:
+Erfahrungspunkte:
+Stufe:
+Waffe:
+Rüstung:
+Schild:
+Goldmünzen:
+Heiltränke:
+Manatränke:
+Schlüssel:
+Portalrollen:
+Proviant:
+Schlachtfelder:
+Aufgabe:
+Level:
+Bewegt die Spielerfigur nach Norden.
+Bewegt die Spielerfigur nach Westen.
+Bewegt die Spielerfigur nach Osten.
+Bewegt die Spielerfigur nach Süden.
+Führt Aktionen mit der Umgebung aus.
+Einen Heiltrank benutzen.
+Einen Manatrank benutzen.
+Eine Portalrolle benutzen.
+Speichert das Spiel ab. Vorhandener Spielstand wird überschrieben!
+Beendet das aktuelle Spiel und kehrt zum Startbildschirm zurück.
+Zauberauswahl
+Fuehrt ausgewaehlten Zauber aus

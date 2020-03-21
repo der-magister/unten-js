@@ -1,0 +1,11 @@
+boss/riesenkrake.png
+Riesenkraken
+193
+300
+80
+80
+9
+12
+Zweifachschlag
+70
+25

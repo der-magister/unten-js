@@ -1,0 +1,11 @@
+schlange.png
+Schlange
+200
+330
+20
+20
+8
+9
+keine
+11
+6

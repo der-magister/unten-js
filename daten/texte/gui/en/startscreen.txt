@@ -1,0 +1,13 @@
+Start new game
+Starts a new game
+Continue Saved Game
+Continues a saved game
+Quit
+Finish the game
+start Editor
+Starts the Editor
+options
+Displays the options
+Contributors
+The creators of this game
+Version: Prototype 003b

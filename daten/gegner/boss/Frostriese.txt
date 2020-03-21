@@ -1,0 +1,11 @@
+Boss/Frostriese.png
+Frostriese
+193
+300
+210
+210
+13
+16
+Vierfachschlag
+600
+120

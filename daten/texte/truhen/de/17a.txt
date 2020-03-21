@@ -1,0 +1,3 @@
+In der Truhe ist ein Wanderstab. Eure aktuelle Waffe 
+ist allerdings besser, daher lasst ihr die Waffe in
+der Truhe.

@@ -1,0 +1,3 @@
+In der Truhe ist ein Holzschild. Eurer aktuelles 
+Schild ist allerdings besser, daher lasst ihr das
+Schild in der Truhe.

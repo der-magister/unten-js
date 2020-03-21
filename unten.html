@@ -1,0 +1,161 @@
+<!--
+//   Unten - ein Rollenspiel im Retrodesign
+//
+//   Copyright (C) 2017-2018 Heiko Wolf
+//
+//   This program is free software; you can redistribute it and/or modify
+//   it under the terms of the GNU General Public License As published by
+//   the Free Software Foundation; either version 2 of the License, or
+//   (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY Or FITNESS For A PARTICULAR PURPOSE.  See the
+//   GNU General Public License For more details.
+//
+//   You should have received a copy of the GNU General Public License along
+//   With this program; if not, write to the Free Software Foundation, Inc.,
+//   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+//   Kontakt: unten@skywave-2000.de
+-->
+
+<!DOCTYPE HTML>
+
+<html lang="de">
+
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable=no"/>
+    
+    <title>Unten</title>
+    
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+   
+  </head>
+
+  <body>
+    
+
+    <noscript>
+      <p>Dieses Spiel benötigt Javascript. Zum Spielen bitte Javascript aktivieren oder Browser mit Javascript Support verwenden.</p>
+    </noscript>
+
+    <!-- Bildschirmelemente -->
+
+    <!-- Startbildschirm -->
+    <h1>Unten</h1>
+    <input type ="text" id="TextName" value ="" onClick="f_clearTextName ();" required/>
+    
+    <div id="klassenwahl">
+      <input type="radio" id="krieger" title="LP + 5, Kraft + 1" name="klasse" value="Krieger" checked/>
+      <label for="krieger" title="LP+5, Kraft +1">Krieger</label>
+      <input type="radio" id="dieb" title="LP + 5, Geschick + 1" name="klasse" value="Dieb"/>
+      <label for="dieb" title="LP + 5, Geschick + 1">Dieb</label>
+      <input type="radio" id="zauberer" title="MP + 1, Klugheit + 1" name="klasse" value="Zauberer" />
+      <label for="zauberer" title="MP + 1, Klugheit + 1">Zauberer</label> 
+    </div>
+
+    <input type="button" id="ButtonNSpiel" value="Neues Spiel beginnen" title="Beginnt ein neues Spiel"/>
+    <input type="button" id="ButtonASpiel" value="Altes Spiel fortsetzen" title="Lädt ein zuvor gespeichertes Spiel und setzt dieses fort"/>
+    
+    <div id="kredits">
+      <p> Programmierung: Heiko Wolf <br>
+          Grafik: Julian H. Wolf, Heiko Wolf <br><br>
+          Musik: <a href="https://opengameart.org/users/remaxim" title="remaxim" target="newTarget">remaxim</a><br>
+          Sound: <a href="https://opengameart.org/users/artisticdude" title="Artisticdude" target="newTarget">Artisticdude</a>, Kenney Vleugels<br>
+          Font: Libertine Open Fonts Projekt<br><br>
+          Lizenz Game: GPL 2.0 <br>
+          Lizenz Musik: <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="CC-BY-SA 3.0" target="newTarget">CC-BY-SA 3.0</a><br>
+          Lizenz Sound: <a href="https://creativecommons.org/publicdomain/zero/1.0/" title="Public Domain Dedication (CCO 1.0)" target="newTarget"> Public Domain Dedication (CCO 1.0)</a><br>
+          Lizenz Font: GPL 2.0<br><br>
+          Version: Prototype 004b<br> 
+          Kontakt: unten@skywave-2000.de</p>
+    </div>
+
+    <div id="changelog">
+      <a href="changelog.txt" title="Changelog" target="newTarget">Changelog</a>
+    </div>
+
+    <div id="lade">
+      <p>Lade... bitte warten.</p>
+    </div>
+    <!-- Canvas -->
+    
+    <canvas width="690" height="575" id="hintergrundcanvas">Browser unterstützt canvas nicht.</canvas>
+    <canvas width="235" height="530" id="ausgabecanvas">Browser unterstützt canvas nicht.</canvas>
+    <!-- Canvas für Tileengine-->
+    <canvas width="420" height="420" id="enginecanvas">Browser unterstützt canvas nicht.</canvas>
+    <!-- Canvas für Kampfhintergrund-->
+    <canvas width="420" height="420" id="kampfhintergrundcanvas">Browser unterstützt canvas nicht.</canvas>
+    <!-- Statuscanvas -->
+    <canvas width="420" height="420" id="statuscanvas">Browser unterstützt canvas nicht.</canvas>
+    <canvas width="365" height="10" id="ausgabe2canvas">Browser unterstützt canvas nicht.</canvas>
+    <!-- canvas für Spielefenster-->
+    <canvas width="380" height="155" id="fenstercanvas">Browser unterstützt canvas nicht.</canvas>
+    <!-- canvas für Kampfmeldungen-->
+    <canvas width="60" height="20" id="kampfmeldungscanvas">Browser unterstützt canvas nicht.</canvas>
+    
+    <!-- Steuerbuttons -->
+    <img id="ButtonN" src="daten/gfk/gui/nord.png" title="Bewegt Charakter nach Norden" alt="N" onClick="f_button_steuerung (1);">
+    <img id="ButtonS" src="daten/gfk/gui/sued.png" title="Bewegt Charakter nach Süden" alt="S" onClick="f_button_steuerung (2);">
+    <img id="ButtonW" src="daten/gfk/gui/west.png" title="Bewegt Charakter nach Westen" alt="W" onClick="f_button_steuerung (3);">
+    <img id="ButtonO" src="daten/gfk/gui/ost.png" title="Bewegt Charakter nach Osten" alt="O" onClick="f_button_steuerung (4);">
+    <img id="ButtonI" src="daten/gfk/gui/interaktion.png" title="Interaktionen" alt="I" onClick="f_button_steuerung (5);">
+    
+    <!-- Inventarbuttons -->
+    <img id="ButtonHeiltrank" src="daten/gfk/gui/heiltrank.png" title="Benutzt einen Heiltrank" alt="1" onClick="f_button_steuerung (6);">
+    <img id="ButtonManatrank" src="daten/gfk/gui/manatrank.png" title="Benutzt einen Manatrank" alt="2" onClick="f_button_steuerung (7);">
+    <img id="ButtonMedizintrank" src="daten/gfk/gui/medizintrank.png" title="Benutzt einen Medizintrank" alt="3" onClick="f_button_steuerung (12);">
+    <img id="ButtonPortalrolle" src="daten/gfk/gui/portalrolle.png" title="Benutzt einen Portalrolle" alt="4" onClick="f_button_steuerung (11);">
+
+    <!-- Zauberauswahl -->
+    <select id="Zauberliste">
+      <option>kein Zauber</option>
+    </select>
+
+    <img id="ButtonZaubern" src="daten/gfk/gui/zaubern.png" title="Führt ausgewählten Zauber aus" alt="Z" onClick="f_button_steuerung (10);">
+
+    <!-- Systembuttons -->
+
+    <!-- Speicherbutton -->
+    <img id="ButtonSpeichern" src="daten/gfk/gui/speichern.png" title="Speichert das aktuelle Spiel (alter Spielstand wird überschrieben!)" alt = "Z" onClick = "f_button_steuerung (9);">
+    
+    <img id="ButtonMusik" src="daten/gfk/gui/musik.png" title="Schaltet die Spielmusik ein oder aus" alt="M" onClick = "f_button_steuerung (14);">
+    <img id="ButtonSound" src="daten/gfk/gui/sfx.png" title="Schaltet Soundeffekte ein oder aus" alt="X" onClick = "f_button_steuerung (13);">
+    
+    <img id="ButtonVollbild" src="daten/gfk/gui/vollbild.png" title="Schaltet Vollbildmodus ein oder aus (aktuell deaktiviert)" alt="V" onClick = "f_button_steuerung (15);">
+    
+    <!-- Verlassen/Flucht-Button -->
+    <img id="ButtonVerlassen" src="daten/gfk/gui/beenden.png" title="Beendet Spiel und geht zum Startbildschirm zurück" alt="B" onClick="f_button_steuerung (8);">
+
+    
+    <!-- verschiedene Sprites -->
+    <img id="spielersprite" src="daten/gfk/editor/leertile.png" alt="1"> 
+    <img id="gegnersprite" src="daten/gfk/editor/leertile.png" alt="2">
+    <img id="treffersprite" src="daten/gfk/kampf/treffer.png" alt="3">
+    <img id="misssprite" src="daten/gfk/kampf/verfehlt.webp" alt="4">
+    <img id="blocksprite" src="daten/gfk/kampf/blocked.png" alt="5">
+    <img id="kritsprite" src="daten/gfk/kampf/krit.png" alt="6">
+    
+    <!-- Haendler -->
+    <h3> Händler </h3>
+    <input type="text" id="PreisHeiltrank" value="" readonly>
+    <input id="KaufHeiltrank" type="number" min="0" max="20" step="1" value="0">
+    <input type="text" id="PreisManatrank" value="" readonly>
+    <input id="KaufManatrank" type="number" min="0" max="20" step="1" value="0">
+    <input type="text" id="PreisPortalrolle" value="" readonly>
+    <input id="KaufPortalrolle" type="number" min="0" max="20" step="1" value="0">
+    <input type="text" id="PreisProviant" value="" readonly>
+    <input id="KaufProviant" type="number" min="0" max="20" step="1" value="0">
+
+    <!-- Media -->
+    <audio loop autoplay id="musik0" src="daten/musik/remaxim/nature_sketch.ogg"></audio>
+    
+    <!-- script -->
+    <!-- <script src = "unten-min.js" defer></script> -->
+     <script src="unten-min.js"></script>
+
+  </body>
+</html>

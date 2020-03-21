@@ -1,0 +1,9 @@
+Folgende Musik wurden dem Wesnoth Projekt entnommen:
+
+battle.ogg
+battle-epic.ogg
+victory.ogg
+the_city_falls.ogg
+into_the_shadows.ogg
+
+Die Rechte liegen bei den entsprechenden Inhabern! https://wiki.wesnoth.org/Credits#Music

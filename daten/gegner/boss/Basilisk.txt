@@ -1,0 +1,11 @@
+boss/Basilisk.png
+Basilisk
+193
+300
+180
+180
+12
+15
+Dreifachschlag
+300
+90

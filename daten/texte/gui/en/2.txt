@@ -1,0 +1,14 @@
+Character creation
+First name:
+Enter the name of the character in this field. A maximum of 15 characters may be long the first name.
+Name:
+Enter the name of the character in this field. A maximum of 15 characters may be long the name.
+Continue
+Saves the character created and begins the game.
+Appearance:
+Warrior
+The character looks like a warrior.
+Thief
+The character looks like a thief.
+Wizard
+The character looks like a magician.

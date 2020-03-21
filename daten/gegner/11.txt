@@ -1,0 +1,11 @@
+Fledermaus.png
+Fledermaus
+200
+300
+24
+24
+9
+11
+keine
+17
+9
